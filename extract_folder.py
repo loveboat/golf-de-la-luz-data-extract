@@ -1,4 +1,4 @@
-import app
+import extract_file
 import os
 
 from sys import argv
@@ -9,4 +9,4 @@ for file in os.listdir(directory):
 	if file.endswith(".eml"):
 		if not directory.endswith('/'):
 			directory += '/'
-		app.main(directory + file)
+		extract_file.main(directory + file)
