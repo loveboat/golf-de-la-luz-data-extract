@@ -7,4 +7,4 @@ script, directory = argv
 
 for file in os.listdir(directory):
 	if file.endswith(".eml"):
-		app.main(file)
+		app.main(directory + file)

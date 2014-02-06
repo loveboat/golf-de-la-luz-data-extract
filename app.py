@@ -9,6 +9,8 @@ def main(filename):
 	files = []
 	data = {}
 
+	print "FILENAME:", filename
+
 	for line in fileinput.input(filename):
 
 		text = line.strip(' \r\n') # strip space & new line chars
@@ -30,6 +32,7 @@ def main(filename):
 		else: # key != '':
 			data[key] += text
 
+	fileinput.close() # else we'll getting a telling off!
 	files.append(data)
 
 	for item in files:
@@ -38,6 +41,8 @@ def main(filename):
 								item['validate_email:'],
 								item['how_hear:'],
 								item['other_detail:'])
+
+
 
 if __name__ == "__main__":
     main(sys.argv[1])
