@@ -9,8 +9,6 @@ def main(filename):
 	files = []
 	data = {}
 
-	print "FILENAME:", filename
-
 	for line in fileinput.input(filename):
 
 		text = line.strip(' \r\n') # strip space & new line chars
